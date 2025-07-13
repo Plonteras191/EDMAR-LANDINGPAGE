@@ -1,0 +1,198 @@
+ /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .contact-subtitle {
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contact-title {
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            color: #000;
+        }
+
+        .contact-description {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-info {
+            padding: 40px;
+        }
+
+        .contact-method {
+            margin-bottom: 40px;
+        }
+
+        .contact-method-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .contact-method-text {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: #f8f8f8;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #000;
+            letter-spacing: 1px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #000;
+        }
+
+        .form-textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-btn {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-btn:hover {
+            background: #333;
+        }
+
+        .store-locations {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .locations-title {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 50px;
+            color: #000;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .location-card {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .location-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .location-address {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .location-hours {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .contact-title {
+                font-size: 32px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px 20px;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .location-card {
+                padding: 20px;
+            }
+        }

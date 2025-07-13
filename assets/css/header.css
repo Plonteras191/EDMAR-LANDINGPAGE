@@ -1,0 +1,120 @@
+       /* Header Styles */
+        .header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .menu-search {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .menu-btn, .search-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header-actions a {
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #000;
+            color: #fff;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Icons using CSS */
+        .menu-icon::before {
+            content: '☰';
+        }
+
+        .search-icon::before {
+            content: '🔍';
+        }
+
+        .heart-icon::before {
+            content: '♡';
+        }
+
+        .user-icon::before {
+            content: '👤';
+        }
+
+        .cart-icon::before {
+            content: '🛍';
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 15px;
+            }
+
+            .menu-search {
+                gap: 20px;
+            }
+
+            .header-actions {
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .header-actions a {
+                font-size: 12px;
+            }
+        }
+  

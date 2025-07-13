@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/product.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <title>AC Website</title>
+</head>
+<body>
+    
+  <div include-html="components/header.html"></div>
+
+  <main>
+  <div include-html="components/home.html"></div>
+  <div include-html="components/about.html"></div>
+  <div include-html="components/product.html"></div>
+  <div include-html="components/contact.html"></div>
+  </main>
+
+  <div include-html="components/footer.html"></div>
+
+
+
+
+
+  <script>
+
+    function includeHTML() {
+      const elements = document.querySelectorAll('[include-html]');
+      elements.forEach(el => {
+        const file = el.getAttribute('include-html');
+        if (file) {
+          fetch(file)
+            .then(res => {
+              if (res.ok) return res.text();
+              else throw new Error(`Error loading ${file}`);
+            })
+            .then(data => {
+              el.innerHTML = data;
+              el.removeAttribute("include-html");
+              includeHTML();
+            })
+            .catch(err => {
+              el.innerHTML = `Could not load ${file}`;
+              console.error(err);
+            });
+        }
+      });
+    }
+
+    includeHTML();
+  </script>
+
+</body>
+</html>
